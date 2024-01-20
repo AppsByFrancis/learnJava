@@ -1,31 +1,27 @@
 package com.example.demo;
 
-class Human {
-    private String name = "Joe";
-    private int age;
-
-    public String getName() {
-        return name;
+class A{
+    public A(){
+        System.out.println("in constructor A");
     }
-
-    public void setName(String name) {
-        this.name = name; // this represents the object which is calling the method
+    public A(int n){
+        System.out.println("in constructor int A");
     }
-
-    public int getAge() {
-        return age;
+}
+class B extends A{
+    public B(){
+        System.out.println("in constructor A");
     }
-
-    public void setAge(int age) {
-        this.age = age;
+    public B(int n){
+        super(n); //
+        System.out.println("in constructor int A");
     }
 }
 public class Demo {
     public static void main (String [] args){
-        Human joe = new Human();
-//        System.out.println(joe.getName());
-        joe.setAge(24);
-        joe.setName("Frank");
-        System.out.println(joe.getName() + " " + joe.getAge());
     }
 }
+
+// The main constructor of the parent class fires first, if argument isn't passed to super function
+// of child parametrized constructor
+// Later, the child class' parametrized function fires if argument is passed
