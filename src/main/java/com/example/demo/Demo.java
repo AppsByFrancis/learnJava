@@ -4,22 +4,21 @@ class Human {
     private String name = "Joe";
     private int age;
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public int getAge (){
+
+    public void setName(String name) {
+        this.name = name; // this represents the object which is calling the method
+    }
+
+    public int getAge() {
         return age;
     }
-    public void setName(String a){
-        name = a;
+
+    public void setAge(int age) {
+        this.age = age;
     }
-    public void setAge (int a){
-        age = a;
-    }
-
-
-
-
 }
 public class Demo {
     public static void main (String [] args){
